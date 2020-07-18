@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+
   before_action :authenticate_user!
   before_action :correct_user, only: [:edit, :update, :destroy]
 
@@ -41,7 +42,7 @@ class BooksController < ApplicationController
   def destroy
     book = Book.find(params[:id])
     book.destroy
-    flash[:notice] = 'Book was successfully destroyed.'
+    flash[:notice] = 'You have destroyed book successfully.'
     redirect_to books_path
   end
 

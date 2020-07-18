@@ -47,7 +47,14 @@
       </div>
     <% end %>
 
-    <%= yield %>
+    <div class="body">
+      <div class="container">
+        <p id="notice"></p>
+
+        <%= yield %>
+
+      </div>
+    </div>
 
     <footer>
       <div class="container">
