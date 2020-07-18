@@ -1,16 +1,14 @@
 <!-- Editing Book -->
-
 <div class="body">
   <div class="container">
     <p id="notice"></p>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <h1>Editing Book</h1>
-        <%= form_for(@book) do |f| %>
         <!-- エラーメッセージ -->
           <% if @book.errors.any? %>
             <div class="alert">
-              <h2><%= @book.errors.count %> errors prohibited this book from being saved:</h2>
+              <h3><%= @book.errors.count %> errors prohibited this book from being saved:</h3>
               <ul>
                 <% @book.errors.full_messages.each do |message| %>
                   <li><%= message %></li>
@@ -19,6 +17,7 @@
             </div>
           <% end %>
         <!-- ここまで -->
+        <%= form_for(@book) do |f| %>
           <div class="field row">
             <label for="book_title">Title</label><br>
             <%= f.text_field :title, class: "col-xs-12"%>

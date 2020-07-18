@@ -16,12 +16,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-  margin-top: 51px;
-}
-
 header {
   color: white;
+}
+
+body {
+  margin-top: 51px;
 }
 
 .navbar-left span {
@@ -33,7 +33,7 @@ p {
   margin: 0 0 10px;
 }
 
-p, ul {
+p, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -50,4 +50,16 @@ a:visited {
 .row {
   margin-right: -15px;
   margin-left: -15px;
+}
+
+.flash {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+#error_explanation {
+  color: red;
 }
